@@ -1,1 +1,302 @@
+/* Configurações Gerais e Cores */
+:root {
+    --verde-escuro: #1b4332;
+    --verde-principal: #2d6a4f;
+    --verde-claro: #52b788;
+    --verde-menta: #d8f3dc;
+    --branco: #ffffff;
+    --cinza-claro: #f8f9fa;
+    --texto-escuro: #212529;
+}
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    background-color: var(--branco);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--cinza-claro);
+}
+
+.bg-dark {
+    background-color: var(--verde-escuro);
+}
+
+.text-white {
+    color: var(--branco) !important;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+/* Typography */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--verde-escuro);
+    margin-bottom: 10px;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--branco);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--verde-escuro);
+}
+
+.logo span {
+    color: var(--verde-claro);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--texto-escuro);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--verde-principal);
+}
+
+/* Hero Banner */
+.hero {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--branco);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 650px;
+    margin-inline: auto;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+}
+
+/* Layouts Flex/Grid */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards do Dashboard */
+.card {
+    background: var(--branco);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border-top: 5px solid var(--verde-principal);
+}
+
+.card h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 15px;
+}
+
+.display-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--verde-principal);
+    margin-bottom: 15px;
+}
+
+.card-status {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.status-good {
+    background-color: var(--verde-menta);
+    color: var(--verde-escuro);
+}
+
+/* Formulário da Calculadora */
+.calc-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--cinza-claro);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--verde-menta);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: var(--verde-principal);
+}
+
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: var(--verde-menta);
+    border-left: 5px solid var(--verde-principal);
+    border-radius: 4px;
+}
+
+/* Seção do Quiz Interativo */
+.quiz-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-option {
+    background: var(--branco);
+    color: var(--verde-escuro);
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-option:hover {
+    background: var(--verde-menta);
+}
+
+/* Footer */
+footer {
+    background-color: #0b2a15;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}

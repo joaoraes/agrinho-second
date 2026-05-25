@@ -1,1 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Agrinho - Inovação e Sustentabilidade</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Agrinho<span>Inova</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#dashboard">Monitoramento</a></li>
+                    <li><a href="#calculadora">Calculadora</a></li>
+                    <li><a href="#interativo">Quiz Interativo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero"
+        style="background-image: linear-gradient(rgba(11, 42, 21, 0.7), rgba(11, 42, 21, 0.7)), url('https://images.unsplash.com/photo-1625246333195-78d9c38ad451?q=80&w=1200');">
+        <div class="hero-content">
+            <h1>Sustentabilidade no Campo</h1>
+            <p>Conectando tecnologia, educação e o futuro da agricultura com o Projeto Agrinho.</p>
+            <a href="#dashboard" class="btn">Explorar Painel</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="container section">
+        <div class="section-title">
+            <h2>O Projeto Agrinho</h2>
+            <p>Cultivando o conhecimento e a inovação nas próximas gerações.</p>
+        </div>
+        <div class="grid-2">
+            <div>
+                <p>O Projeto Agrinho é uma iniciativa que visa levar as realidades do campo para o ambiente escolar,
+                    instigando o pensamento crítico, a sustentabilidade e o uso de novas tecnologias no manejo agrícola.
+                </p>
+                <p>Através deste portal, produtores e estudantes podem simular dados em tempo real para otimizar o uso
+                    de recursos hídricos e monitorar as condições climáticas essenciais para o sucesso da lavoura.</p>
+            </div>
+            <div class="image-gallery">
+                <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?q=80&w=500" alt="Plantação jovem"
+                    class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <section id="dashboard" class="bg-light section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Monitoramento em Tempo Real</h2>
+                <p>Simulação das condições climáticas atuais da sua região.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Temperatura</h3>
+                    <div class="display-value" id="temp-val">26°C</div>
+                    <p class="card-status status-good">Ideal para o plantio</p>
+                </div>
+                <div class="card">
+                    <h3>Umidade do Ar</h3>
+                    <div class="display-value" id="umi-val">65%</div>
+                    <p class="card-status status-good">Solo e clima estáveis</p>
+                </div>
+                <div class="card">
+                    <h3>Qualidade do Ar</h3>
+                    <div class="display-value" id="ar-val">Excelente</div>
+                    <p class="card-status status-good">Baixo índice de poluentes</p>
+                </div>
+            </div>
+            <div class="center-text mt-2">
+                <button class="btn btn-secondary" onclick="atualizarClima()">Simular Nova Leitura</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculadora" class="container section">
+        <div class="section-title">
+            <h2>Calculadora de Irrigação</h2>
+            <p>Calcule a necessidade hídrica da sua plantação de forma inteligente.</p>
+        </div>
+        <div class="calc-container">
+            <div class="form-group">
+                <label for="tipo-cultura">Tipo de Cultura:</label>
+                <select id="tipo-cultura">
+                    <option value="40000">Hortaliças (Consumo Alto)</option>
+                    <option value="30000">Grãos / Milho (Consumo Médio)</option>
+                    <option value="20000">Pastagem / Pomares (Consumo Moderado)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="hectares">Quantidade de Hectares:</label>
+                <input type="number" id="hectares" value="1" min="0.1" step="0.1">
+            </div>
+            <button class="btn" onclick="calcularAgua()">Calcular Consumo</button>
+
+            <div class="result-box" id="resultado-calc" style="display: none;">
+                <h3>Resultado Estimado:</h3>
+                <p id="txt-resultado">--</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="interativo" class="bg-dark section text-white">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="text-white">Desafio Agrinho</h2>
+                <p>Teste seus conhecimentos sobre a sustentabilidade no campo!</p>
+            </div>
+            <div class="quiz-container" id="quiz-box">
+                <h3 id="quiz-pergunta">Pergunta: Qual a melhor técnica para evitar a erosão do solo?</h3>
+                <div class="quiz-options">
+                    <button class="btn-option" onclick="verificarResposta(true)">Plantio Direto e Curvas de
+                        Nível</button>
+                    <button class="btn-option" onclick="verificarResposta(false)">Desmatamento da encosta</button>
+                    <button class="btn-option" onclick="verificarResposta(false)">Queimada controlada anual</button>
+                </div>
+                <p id="quiz-feedback" class="mt-2"></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Projeto Agrinho. Desenvolvido com foco no futuro sustentável do Campo.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
