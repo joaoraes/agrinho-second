@@ -1,7 +1,7 @@
 # Projeto Agrinho-2026
 
 # Sobre: 
-O Programa Agrinho é a maior iniciativa de responsabilidade social do Sistema FAEP/SENAR-PR, atuando nas escolas para incentivar a pesquisa, a criatividade e a cidadania entre crianças e jovens. O site oficial do programa funciona como um grande portal digital que centraliza esse ecossistema, servindo como um hub para o download de cartilhas e materiais pedagógicos, além de ser a plataforma oficial para a inscrição e envio dos trabalhos que concorrem aos tradicionais prêmios anuais.
+Este site foi desenvolvido para apresentar o papel da inovação e da responsabilidade ambiental no campo, destacando como a tecnologia e a sustentabilidade caminham juntas na agricultura moderna. A página explora práticas fundamentais como o sistema de plantio direto, que protege o solo, evita a erosão e mantém a umidade da terra ao cultivar a nova plantação sobre os resíduos da colheita anterior, dispensando a aração convencional. Integrando esse método ao uso de ferramentas tecnológicas avançadas — como sensores, monitoramento inteligente e maquinários de precisão —, o projeto demonstra que é possível otimizar os recursos naturais, aumentar a eficiência da produção e garantir a segurança alimentar sem causar prejuízos ao ecossistema, promovendo um futuro mais equilibrado e consciente para o agronegócio.
 
 # Recursos utilizados: 
 - HTML
